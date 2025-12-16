@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Weekly Tasks</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #0f0f0f;
+    color: #f5f5f5;
+}
+
+/* SECTION */
+.section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* TITLE */
+#weekly-tasks h2 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+/* CONTAINER */
+#weekly-tasks .journey {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* WEEK HEADING */
+#weekly-tasks h3 {
+    font-size: 20px;
+    color: #3498db;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    position: relative;
+}
+
+/* LEFT LINE */
+#weekly-tasks h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 4px;
+    height: 18px;
+    background: #3498db;
+    border-radius: 10px;
+}
+
+/* DESCRIPTION BOX */
+#weekly-tasks p {
+    background: #1a1a1a;
+    padding: 18px 22px;
+    border-radius: 14px;
+    color: #cfcfcf;
+    line-height: 1.8;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+#weekly-tasks p:hover {
+    background: #202020;
+    transform: translateX(6px);
+}
+
+/* STRONG TEXT */
+#weekly-tasks strong {
+    color: #ffffff;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+    #weekly-tasks h2 {
+        font-size: 28px;
+    }
+
+    #weekly-tasks h3 {
+        font-size: 18px;
+    }
+
+    #weekly-tasks p {
+        font-size: 14px;
+        padding: 16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- WEEKLY TASKS -->
+<section class="section" id="weekly-tasks">
+    <h2>Weekly Tasks & Activities</h2>
+
+    <div class="journey">
+
+        <h3>Week – 08.10.2025</h3>
+        <p>
+            Created a GitHub profile and added a README file describing completed tasks.
+            Studied HTML basics from W3Schools including headings, paragraphs, lists,
+            and tables with practical examples.
+        </p>
+
+        <h3>Week – 15.10.2025</h3>
+        <p>
+            Completed the assigned HTML task and published it on GitHub.
+            Finished the allocated class task and created a personal profile webpage,
+            which was uploaded to GitHub.
+        </p>
+
+        <h3>Week – 29.10.2025</h3>
+        <p>
+            Combined all previous tasks into one complete webpage including a
+            student profile, README file, and merged task work.
+        </p>
+
+        <h3>Week – 05.11.2025</h3>
+        <p>
+            Created a new GitHub repository named <strong>29_01_25_Task</strong>
+            and completed one assigned HTML task, practicing GitHub repository
+            management and deployment.
+        </p>
+
+        <h3>Week – 26.11.2025</h3>
+        <p>
+            Prepared a progress report and certification presentation.
+            Improved the mini project presentation and created an HTML & CSS table
+            using media queries, animations, and different styling techniques.
+        </p>
+
+        <h3>Week – 03.12.2025</h3>
+        <p>
+            Reviewed HTML and CSS concepts from W3Schools and prepared
+            presentation slides explaining the topics.
+        </p>
+
+        <h3>Week – 10.12.2025</h3>
+        <p>
+            Created a final personal profile webpage including all completed tasks
+            and CV. Completed and finalized the certification presentation.
+        </p>
+
+    </div>
+</section>
+
+</body>
+</html>

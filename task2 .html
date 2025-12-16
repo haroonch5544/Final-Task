@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2 - Table and List Structuring</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        .nav-btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .nav-btn:hover {
+            background-color: #1d6fa5;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Task 2: Table and List Structuring</h1>
+
+    <p>This page demonstrates how to create tables with column headers, merged cells using <code>colspan</code> and <code>rowspan</code>, and includes ordered and unordered lists.</p>
+
+    <!-- Table with Data and Colspan, Rowspan -->
+    <table>
+        <caption>Course Details</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Python Basics</td>
+                <td>SoloLearn</td>
+                <td>4 Weeks</td>
+            </tr>
+            <tr>
+                <td colspan="2">Covered Python fundamentals, loops, and functions.</td>
+            </tr>
+            <tr>
+                <td>HTML & CSS</td>
+                <td>Coursera</td>
+                <td>3 Weeks</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Unordered List -->
+    <h3>Skills Learned:</h3>
+    <ul>
+        <li>Python programming basics</li>
+        <li>Understanding HTML and CSS</li>
+        <li>Web development basics</li>
+    </ul>
+
+    <!-- Ordered List with Nested Lists -->
+    <h3>Assignments:</h3>
+    <ol>
+        <li>Week 1: HTML Basics
+            <ul>
+                <li>Learn HTML structure and elements</li>
+                <li>Create basic HTML pages</li>
+            </ul>
+        </li>
+        <li>Week 2: CSS Basics
+            <ul>
+                <li>Style HTML pages using CSS</li>
+                <li>Learn about CSS properties and selectors</li>
+            </ul>
+        </li>
+    </ol>
+
+    <!-- Quotation Block -->
+    <h3>Testimonial:</h3>
+    <blockquote cite="https://example.com">
+        "This course helped me understand web development basics clearly. It was well-structured and easy to follow."
+    </blockquote>
+
+    <!-- External Link -->
+    <h3>Find more information:</h3>
+    <p>For more resources, visit <a href="https://www.w3schools.com" target="_blank">W3Schools</a>.</p>
+
+    <!-- Navigation to Main Page -->
+    <a href="index.html" class="nav-btn">Back to Main Page</a>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Final Tasks</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #0f0f0f;
+    color: #f5f5f5;
+}
+
+/* HEADER */
+header {
+    padding: 20px 30px;
+    border-bottom: 1px solid #222;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+header p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* SECTION */
+.section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+}
+
+.card a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* SKILLS */
+.skills {
+    text-align: center;
+}
+
+.skills span {
+    display: inline-block;
+    background: #262626;
+    padding: 10px 18px;
+    margin: 8px;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+.skills span:hover {
+    background: #3498db;
+}
+
+/* JOURNEY & WEEKLY TASKS */
+.journey {
+    max-width: 800px;
+    margin: auto;
+    color: #bbb;
+    line-height: 1.8;
+}
+
+.journey h3 {
+    margin-top: 30px;
+    color: #fff;
+}
+
+/* SOCIAL */
+.social {
+    text-align: center;
+}
+
+.social a {
+    margin: 0 15px;
+    color: #aaa;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.social a:hover {
+    color: #3498db;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+}
+
+.contact form {
+    max-width: 400px;
+    margin: auto;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+.contact button {
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    background: #3498db;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #777;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1>Muhammad Haroon ur Rasheed</h1>
+    <p>Internet & Web Basics</p>
+</header>
+
+<!-- NAVIGATION -->
+<section class="section">
+    <h2>Explore My Work</h2>
+    <div class="cards">
+        <div class="card"><a href="task.html">Weekly Tasks</a></div>
+        <div class="card"><a href="portfolio.html">Portfolio</a></div>
+        <div class="card"><a href="presentations.html">Mini Project</a></div>
+        <div class="card"><a href="certificate.html">Certificate Presentation</a></div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section">
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>GitHub</span>
+        <span>Responsive Design</span>
+        <span>Web Basics</span>
+    </div>
+</section>
+
+<!-- JOURNEY -->
+<section class="section">
+    <h2>My Journey & Focus</h2>
+    <div class="journey">
+        I am learning the fundamentals of web development by building structured
+        HTML pages, styling them with CSS, making them responsive, and hosting
+        projects on GitHub Pages. This website showcases my weekly learning
+        progress and completed coursework.
+    </div>
+</section>
+
+
+
+<!-- SOCIAL -->
+<section class="section social">
+    <h2>Connect With Me</h2>
+
+    <a href="https://github.com/haroonch5544" target="_blank" rel="noopener noreferrer">
+        GitHub
+    </a>
+
+    <a href="https://www.instagram.com/har00n._rasheed/" target="_blank" rel="noopener noreferrer">
+        Instagram
+    </a>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact">
+    <h2>Contact Me</h2>
+
+    <form action="https://formsubmit.co/your-email@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="thankyou.html">
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    © 2025 | Muhammad Haroon ur Rasheed
+</footer>
+
+</body>
+</html>
+
+
