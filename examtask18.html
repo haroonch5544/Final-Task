@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam Task 18 - Prevent Submit</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 520px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d6fa5;
+        }
+
+        .error {
+            color: #c0392b;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        .result {
+            margin-top: 25px;
+            padding: 15px;
+            background: #eef3f7;
+            border-radius: 6px;
+            display: none;
+            font-size: 14px;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #3498db;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Exam Task 18</h2>
+
+    <form onsubmit="return validateForm()">
+        <label>Full Name</label>
+        <input type="text" id="name">
+        <div class="error" id="nameError"></div>
+
+        <label>Email</label>
+        <input type="text" id="email">
+        <div class="error" id="emailError"></div>
+
+        <label>Password</label>
+        <input type="password" id="password">
+        <div class="error" id="passwordError"></div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="result" id="result">
+        <h3>Submitted Data</h3>
+        <p><strong>Name:</strong> <span id="rName"></span></p>
+        <p><strong>Email:</strong> <span id="rEmail"></span></p>
+        <p><strong>Password:</strong> <span id="rPassword"></span></p>
+    </div>
+
+    <a href="examtask.html">← Back to Exam Tasks</a>
+</div>
+
+<script>
+    function validateForm() {
+        let valid = true;
+
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let password = document.getElementById("password").value;
+
+        document.getElementById("nameError").innerText = "";
+        document.getElementById("emailError").innerText = "";
+        document.getElementById("passwordError").innerText = "";
+
+        if (name === "") {
+            document.getElementById("nameError").innerText = "Name is required";
+            valid = false;
+        }
+
+        let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if (!emailPattern.test(email)) {
+            document.getElementById("emailError").innerText = "Enter valid email";
+            valid = false;
+        }
+
+        if (password.length < 6) {
+            document.getElementById("passwordError").innerText =
+                "Password must be at least 6 characters";
+            valid = false;
+        }
+
+        if (valid) {
+            document.getElementById("rName").innerText = name;
+            document.getElementById("rEmail").innerText = email;
+            document.getElementById("rPassword").innerText = password;
+            document.getElementById("result").style.display = "block";
+        }
+
+        return false; // prevent actual form submission
+    }
+</script>
+
+</body>
+</html>

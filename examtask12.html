@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam Task 12 - Splice Insert</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background: #1d6fa5;
+        }
+
+        .output {
+            margin-top: 20px;
+            padding: 15px;
+            background: #eef3f7;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #3498db;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Exam Task 12</h2>
+    <p>
+        This task inserts new elements into an array at a specific index
+        using the JavaScript <strong>splice()</strong> method.
+    </p>
+
+    <button onclick="insertElement()">Insert Elements</button>
+
+    <div class="output" id="result">
+        Array will appear here...
+    </div>
+
+    <a href="examtask.html">← Back to Exam Tasks</a>
+</div>
+
+<script>
+    function insertElement() {
+        let numbers = [10, 20, 30, 40, 50];
+
+        // Insert elements at index 2
+        numbers.splice(2, 0, 25, 27);
+
+        document.getElementById("result").innerHTML =
+            "Updated Array: " + numbers.join(", ");
+    }
+</script>
+
+</body>
+</html>

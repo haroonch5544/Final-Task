@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam Task 11 - Max & Min</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d6fa5;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #3498db;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Exam Task 11</h2>
+    <p>
+        This task finds the maximum and minimum values from an array and displays
+        them using a popup alert.
+    </p>
+
+    <button onclick="findMaxMin()">Find Max & Min</button>
+
+    <a href="examtask.html">← Back to Exam Tasks</a>
+</div>
+
+<script>
+    function findMaxMin() {
+        let numbers = [12, 45, 7, 89, 23, 5];
+
+        let maxValue = Math.max(...numbers);
+        let minValue = Math.min(...numbers);
+
+        alert("Maximum value: " + maxValue + "\nMinimum value: " + minValue);
+    }
+</script>
+
+</body>
+</html>

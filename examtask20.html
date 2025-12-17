@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam Task 20 - Object with Loop</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1e8449;
+        }
+
+        .result {
+            margin-top: 25px;
+            padding: 15px;
+            background: #eef3f7;
+            border-radius: 6px;
+            font-size: 14px;
+            display: none;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #3498db;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Exam Task 20</h2>
+
+    <p>
+        This task displays all properties of a JavaScript object
+        using a loop.
+    </p>
+
+    <button onclick="displayObject()">Display Object Properties</button>
+
+    <div class="result" id="result">
+        <h3>Object Details</h3>
+        <ul id="output"></ul>
+    </div>
+
+    <a href="examtask.html">← Back to Exam Tasks</a>
+</div>
+
+<script>
+    function displayObject() {
+
+        // Creating object
+        let person = {
+            name: "Haroon",
+            age: 21,
+            gender: "Male"
+        };
+
+        let list = document.getElementById("output");
+        list.innerHTML = "";
+
+        // Loop through object properties
+        for (let key in person) {
+            let li = document.createElement("li");
+            li.innerHTML = "<strong>" + key + ":</strong> " + person[key];
+            list.appendChild(li);
+        }
+
+        document.getElementById("result").style.display = "block";
+    }
+</script>
+
+</body>
+</html>

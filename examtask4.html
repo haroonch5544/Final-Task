@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exam Task 4 – Find Substring Location</title>
+
+<style>
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f4f6f8;
+        padding: 40px 20px;
+        color: #2c3e50;
+    }
+
+    .container {
+        max-width: 520px;
+        margin: auto;
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    h1 {
+        color: #3498db;
+        margin-bottom: 10px;
+    }
+
+    .desc {
+        font-size: 15px;
+        margin-bottom: 25px;
+        line-height: 1.6;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        font-size: 15px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        padding: 10px 25px;
+        background: #3498db;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #1d6fa5;
+    }
+
+    .result {
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .back {
+        display: block;
+        margin-top: 25px;
+        color: #3498db;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .back:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Exam Task 4</h1>
+
+    <p class="desc">
+        This task takes a main string and a substring as input from the user.
+        It finds the position (index) of the substring within the main string
+        and displays the result.
+    </p>
+
+    <input type="text" id="mainText" placeholder="Enter main string">
+    <input type="text" id="subText" placeholder="Enter substring">
+
+    <button onclick="findSubstring()">Find Location</button>
+
+    <div class="result" id="output"></div>
+
+    <a href="examtask.html" class="back">← Back to Exam Tasks</a>
+</div>
+
+<script>
+function findSubstring() {
+    let main = document.getElementById("mainText").value;
+    let sub = document.getElementById("subText").value;
+
+    if (sub === "") {
+        document.getElementById("output").innerText =
+            "Please enter a substring.";
+        return;
+    }
+
+    let position = main.indexOf(sub);
+
+    if (position === -1) {
+        document.getElementById("output").innerText =
+            "Substring not found.";
+    } else {
+        document.getElementById("output").innerText =
+            "Substring found at position: " + position;
+    }
+}
+</script>
+
+</body>
+</html>

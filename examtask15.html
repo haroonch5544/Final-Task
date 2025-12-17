@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam Task 15 - Mobile Validation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d6fa5;
+        }
+
+        .output {
+            margin-top: 20px;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .valid {
+            background-color: #dff0d8;
+            color: #2e7d32;
+        }
+
+        .invalid {
+            background-color: #fdecea;
+            color: #c0392b;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #3498db;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Exam Task 15</h2>
+    <p>
+        This task validates a mobile number by checking
+        whether it contains exactly 10 digits.
+    </p>
+
+    <input type="text" id="mobile" placeholder="Enter mobile number">
+
+    <button onclick="validateMobile()">Validate Mobile Number</button>
+
+    <div class="output" id="result"></div>
+
+    <a href="examtask.html">← Back to Exam Tasks</a>
+</div>
+
+<script>
+    function validateMobile() {
+        let mobile = document.getElementById("mobile").value;
+
+        // Pattern for exactly 10 digits
+        let pattern = /^[0-9]{10}$/;
+
+        let result = document.getElementById("result");
+
+        if (pattern.test(mobile)) {
+            result.innerHTML = "Valid Mobile Number ✔";
+            result.className = "output valid";
+        } else {
+            result.innerHTML = "Invalid Mobile Number ✖ (Enter 10 digits)";
+            result.className = "output invalid";
+        }
+    }
+</script>
+
+</body>
+</html>
